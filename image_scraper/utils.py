@@ -126,7 +126,7 @@ class ImageScraper(object):
             except requests.exceptions.ConnectionError:
                 raise PageLoadError(None)
             try:
-                page_html = page.text
+                page_html = page.content
                 page_url = page.url
             except UnboundLocalError:
                 raise PageLoadError(None)
